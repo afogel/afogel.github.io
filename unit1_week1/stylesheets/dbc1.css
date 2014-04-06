@@ -1,0 +1,19 @@
+
+p{
+	font-family: "Arial", sans-serif;
+	font-size: 14;
+	color: lime;
+	background-color: black;
+}
+
+#testid{
+	color: red;
+}
+
+.testclass{
+	background-color: purple;
+}
+
+h5{
+	color:maroon;
+}
