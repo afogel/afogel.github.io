@@ -5,6 +5,7 @@ body{
 	padding: 10px;
 
 }
+
 #header{
 	text-align: center;
 }
@@ -12,3 +13,8 @@ body{
 	text-align: center;
 
 }
+
+#sidebar{
+    float:left;
+    width:160px;
+  }
