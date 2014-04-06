@@ -1,4 +1,6 @@
-
+body{
+	background-color: purple;
+}
 p{
 	font-family: "Arial", sans-serif;
 	font-size: 14;
