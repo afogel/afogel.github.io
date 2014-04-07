@@ -22,3 +22,20 @@ body{
 #footer{
 	left: 80px;
 }
+
+.purple{
+	color: purple;
+}
+
+a:link{
+	color: blue;
+}
+a:visited{
+	color: yellow;
+}
+a:hover{
+	color:purple;
+}
+a:active{
+	color: cyan;
+}
