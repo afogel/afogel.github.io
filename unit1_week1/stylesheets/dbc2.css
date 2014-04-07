@@ -7,9 +7,8 @@ body{
 
 }
 #imgid{
-	width: 400px;
-	height: 400px;
-	left: 15px;
+	width: 200px;
+	height: 200px;
 }
 
 .top{
@@ -21,8 +20,8 @@ body{
 }
 
 #header{
-	text-align: center;
-	width: 400px;
+	float: top;
+	width: 600px;
 	height: 160px;
 }
 #content_area{
@@ -39,6 +38,7 @@ body{
   }
 
 #footer{
+	float: bottom;
 	height: 400px;
 	bottom: 80px;
 }
