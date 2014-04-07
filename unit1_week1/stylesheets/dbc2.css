@@ -40,6 +40,8 @@ body{
   }
 
 #footer{
+	height: 400px;
+	bottom: 10px;
 }
 
 .purple{
