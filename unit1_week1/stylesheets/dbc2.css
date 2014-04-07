@@ -13,16 +13,17 @@ body{
 
 .top{
 	position: absolute;
-	left: 15px;
+	left: 215px;
 	z-index: 2;
 	color: blue;
 	font-style: bold;
+	background-color: black;
 }
 
 #header{
 	float: top;
 	width: 600px;
-	height: 160px;
+	height: 200px;
 }
 #content_area{
 	float: right;
@@ -32,15 +33,12 @@ body{
 
 #sidebar{
     float:left;
-    width:160px;
+    width:200px;
     height: 200px;
     top: -40px;
   }
 
 #footer{
-	float: bottom;
-	height: 400px;
-	bottom: 80px;
 }
 
 .purple{
