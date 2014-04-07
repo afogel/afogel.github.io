@@ -12,7 +12,7 @@ body{
 .top{
 	position: absolute;
 	bottom: 15px;
-	left: 60px;
+	right: 60px;
 	z-index: 2;
 	color: blue;
 	font-style: bold;
