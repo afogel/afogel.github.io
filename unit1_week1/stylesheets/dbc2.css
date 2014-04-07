@@ -27,15 +27,19 @@ body{
 }
 #content_area{
 	float: right;
+	height: 400px;
+	width: 400px;
 }
 
 #sidebar{
     float:left;
     width:160px;
+    height: 200px;
     top: -40px;
   }
 
 #footer{
+	height: 400px
 	bottom: 80px;
 }
 
