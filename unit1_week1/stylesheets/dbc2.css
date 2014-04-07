@@ -25,6 +25,7 @@ body{
 	float: top;
 	width: 600px;
 	height: 200px;
+	text-align: center;
 }
 #content_area{
 	float: right;
@@ -40,8 +41,7 @@ body{
   }
 
 #footer{
-	height: 400px;
-	bottom: 10px;
+	text-align: center;
 }
 
 .purple{
