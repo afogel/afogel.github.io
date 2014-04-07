@@ -13,10 +13,11 @@ body{
 
 .top{
 	position: absolute;
-	left: 215px;
+	left: 300px;
 	z-index: 2;
-	color: blue;
+	color: white;
 	font-style: bold;
+	font-family: Calibri sans-serif;
 	background-color: black;
 }
 
