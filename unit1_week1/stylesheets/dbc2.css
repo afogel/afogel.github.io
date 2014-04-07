@@ -4,6 +4,19 @@ body{
 	padding: 10px;
 
 }
+#imgid{
+	width: 400px;
+	height: 400px;
+}
+
+.top{
+	position: absolute;
+	bottom: 15px;
+	left: 60px;
+	z-index: 2;
+	color: blue;
+	font-style: bold;
+}
 
 #header{
 	text-align: center;
@@ -11,9 +24,10 @@ body{
 	height: 160px;
 }
 #content_area{
-	text-align: left;
+	float: right;
 	width: 400px;
 	height: 400px;
+
 }
 
 #sidebar{
