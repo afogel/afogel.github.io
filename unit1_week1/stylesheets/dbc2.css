@@ -7,12 +7,14 @@ body{
 #imgid{
 	width: 400px;
 	height: 400px;
+	bottom: 15px;
+	right: 100px;
 }
 
 .top{
 	position: absolute;
 	bottom: 15px;
-	right: 60px;
+	right: 100px;
 	z-index: 2;
 	color: blue;
 	font-style: bold;
@@ -34,14 +36,10 @@ body{
     float:left;
     width:160px;
     top: -40px;
-    width: 40px;
-    height: 40px;
   }
 
 #footer{
 	left: 80px;
-	width: 80px;
-	height: 20px;
 }
 
 .purple{
