@@ -2,12 +2,14 @@ body{
 	margin: 40px;
 	border: 50px solid black;
 	padding: 10px;
+	height: 600px;
+	width: 600px;
 
 }
 #imgid{
 	width: 400px;
 	height: 400px;
-	bottom: 15px;
+	: 15px;
 	right: 100px;
 }
 
