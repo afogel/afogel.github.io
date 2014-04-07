@@ -41,6 +41,8 @@ body{
   }
 
 #footer{
+	clear:both;
+	color: white;
 	text-align: center;
 }
 
