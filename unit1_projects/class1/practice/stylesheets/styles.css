@@ -61,7 +61,7 @@ a:hover{
   padding: 5px 10px;
   text-decoration: none;
 }
-.nav:hover{
+.nav:hover a{
   color:black;
 }
 .jump {
