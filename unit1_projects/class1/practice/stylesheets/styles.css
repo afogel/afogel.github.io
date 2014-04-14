@@ -61,7 +61,9 @@ a:hover{
   padding: 5px 10px;
   text-decoration: none;
 }
-
+.nav:hover{
+  color:black;
+}
 .jump {
   color: #565656;
   font-size: 70px;
