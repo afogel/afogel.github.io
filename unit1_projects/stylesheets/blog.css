@@ -16,16 +16,49 @@ body{
 
 #dashboard{
 	width: 800px;
-	margin: 20px auto;
-	height: 550px;
+	margin-top: 20px;
+	margin-right:  auto;
+	margin-left:  auto;
+	margin-bottom: 0px;
+	height: auto;
 	background-color: #C0D1DB;
 	border: 10px solid #A8A8A8;
 	border-radius: 5px;
+
 }
 
 #sidebar{
-	background-color: #B3521A;
+	background-color: #D5611F;
     float:left;
+    border: 1px black solid;
+    height: 1400px;
+    padding: 2px;
+    width: 175px;
+    text-align: left;
+}
+
+#sidebar ul{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+#sidebar li{
+	display: inline-block;
+	margin: 5px auto;
+	width: 150px;
+	font-weight:bold;
+}
+
+#footer{
+	clear:both;
+	color: #C3883F;
+	text-align: center;
+	font-weight:bold;
+}
+#footer a{
+	color: #76480F;
+	font-weight:bold;
 }
 /*
 #dashboard{
