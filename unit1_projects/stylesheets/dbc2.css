@@ -14,9 +14,9 @@ body{
 	background: linear-gradient(#2614CC, #463D99); /* Standard syntax */
 }
 
-#imgid{
-	width: 200px;
-	height: 200px;
+img {
+    width: 50%; /* you can use % */
+    height: auto;
 }
 
 .top{
