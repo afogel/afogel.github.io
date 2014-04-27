@@ -1,0 +1,111 @@
+html { 
+	background: url("../images/switzerland.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+body{
+	margin: auto;
+	/*border: 50px solid #CC5C14;*/
+	padding: ;
+	height: auto;
+	width: auto;
+	color: #1C638F;
+}
+
+#dashboard{
+	width: 800px;
+	margin: 20px auto;
+	height: 550px;
+	background-color: #C0D1DB;
+	border: 10px solid #A8A8A8;
+	border-radius: 5px;
+}
+
+#sidebar{
+	background-color: #B3521A;
+    float:left;
+}
+/*
+#dashboard{
+	display: table;
+	background-color: #C0D1DB;
+	min-height: 500px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+
+#gradient{
+	background: -webkit-linear-gradient(#2614CC, #463D99); 
+	background: -o-linear-gradient(#2614CC, #463D99); 
+	background: -moz-linear-gradient(#2614CC, #463D99;
+	background: linear-gradient(#2614CC, #463D99); 
+}
+
+.top{
+	position: absolute;
+	left: 300px;
+	z-index: 2;
+	color: white;
+	font-style: bold;
+	font-family: Calibri sans-serif;
+	background-color: #463D99;
+}
+
+#header{
+	display: table-row;
+	float: top;
+	width: 600px;
+	height: 200px;
+	margin: auto;
+	text-align: center;
+	border: 5px solid black;
+}
+#content_area{
+	display: table-cell;
+	float: right;
+	border-radius: 10px;
+	border: 50px solid black;
+	padding: 10px;
+	height: auto;
+	width: ;
+	color: #FF9F30;
+}
+
+#sidebar{
+	display: table-cell;
+	background-color: #2F3E43;
+    float:left;
+    width:60px;
+    height: 200px;
+    top: -40px;
+
+  }
+
+#footer{
+	clear:both;
+	color: white;
+	text-align: center;
+	background-color: #463D99;
+}
+
+.purple{
+	color: purple;
+	font-style: bold;
+}
+
+a:link{
+	color: #FF9F30;
+}
+a:visited{
+	color: #CC5C14;
+}
+a:hover{
+	color:#006EFF;
+}
+a:active{
+	color: #463D99;
+}/*
