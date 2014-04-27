@@ -1,10 +1,18 @@
 body{
 	margin: 40px;
-	border: 50px solid #CC5C14;
+	border-radius: 10px;
+	/*border: 50px solid #CC5C14;*/
 	padding: 10px;
-	height: 600px;
-	width: 600px;
+	height: 110%;
+	width: auto;
 	color: #FF9F30;
+	html { 
+	background: url("unit1_projects/images/water.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 }
 
 #gradient{
@@ -37,8 +45,12 @@ img {
 }
 #content_area{
 	float: right;
-	height: 400px;
-	width: 400px;
+	border-radius: 10px;
+	border: 50px solid ;
+	padding: 10px;
+	height: auto;
+	width: auto;
+	color: #FF9F30;
 }
 
 #sidebar{
@@ -52,6 +64,7 @@ img {
 	clear:both;
 	color: white;
 	text-align: center;
+	background-color: #463D99;
 }
 
 .purple{
@@ -60,14 +73,14 @@ img {
 }
 
 a:link{
-	color: blue;
+	color: #FF9F30;
 }
 a:visited{
-	color: yellow;
+	color: #CC5C14;
 }
 a:hover{
-	color:purple;
+	color:#006EFF;
 }
 a:active{
-	color: cyan;
+	color: #463D99;
 }
