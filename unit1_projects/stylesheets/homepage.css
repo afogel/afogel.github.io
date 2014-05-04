@@ -1,0 +1,95 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;;
+    color: #F87531;
+    background: url('/unit1_projects/images/home_background.jpg');
+}
+
+ .centeredContent{
+      width: 100%;
+      max-width:1400px;
+      margin: 0 auto;
+  }
+
+#wrapper {
+    display: table;
+    width: 60%;
+    height: 90%;
+    margin: 0 20%;
+    margin-top: 5%;
+    margin-bottom: 0;
+    border: 7px solid #F87531;
+    border-radius: 7px;
+}
+#wrapper > div {
+    display: table-row;
+}
+#wrapper > div > div {
+    display: table-cell;
+}
+#top,
+#bottom {
+    height: 10%;
+}
+#contentHeading{
+    font-size: 2.5em;
+}
+
+#wrapper > div > #sideNavt,
+#wrapper > div > #sideNavcontent{
+    width: 30%;
+}
+#wrapper > div > #sideNavcontent {
+    background-image: url('../images/sidenav_pattern.jpg');
+}
+
+#sideNavcontent li{
+    list-style: none;
+    text-decoration: none;
+}
+#sideNavcontent li a{
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    text-align: right;
+}
+
+
+#wrapper > div > #contentArea {
+    background: #F5DEB3;
+}
+#wrapper > div > #contentHeading{
+    background: #F5DEB3;
+}
+#wrapper > div > #sideNavt{
+    background-image: url('../images/sidenav_pattern.jpg');
+}
+
+#footer{
+    width: 61%;
+    height:5%;
+    background:#F5DEB3;
+    margin: 0 20%;
+}
+
+.button{
+    border: 2px solid #d3d3d3;
+    color: #F87531;
+    padding: .25em;
+    margin: 1px 0;
+
+}
+.button:after{
+    border-bottom: 2px solid #d3d3d3;
+}
+
+.button:hover{
+    background-color: #7e7e7e;
+    color: #F5DEB3;
+}
+.button:hover a{
+    text-decoration: underline;
+}
