@@ -33,20 +33,20 @@ body{
     border: 1px black solid;
     height: 1400px;
     padding: 2px;
-    width: 175px;
+    width: 33%;
     text-align: left;
 }
 
+#content_area{
+	width: 66%;
+}
+
 #sidebar ul{
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+	list-style-type: none;
 }
 
 #sidebar li{
-	display: inline-block;
 	margin: 5px auto;
-	width: 150px;
 	font-weight:bold;
 }
 
