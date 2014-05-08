@@ -12,11 +12,11 @@ html {
 	background-image: -ms-linear-gradient(bottom, #1292E8 50%, #36C9FF 100%);
 	background-image: linear-gradient(to bottom, #1292E8 50%, #36C9FF 100%);
 	/*Thank you http://www.css3factory.com/linear-gradients/ for helping me generate such a nice gradient*/
-	height: 100%;
-	width: 100%;
+	min-height: 100%;
+	min-width: 100%;
 }
 body{
-	height: 100%;
+	min-height: 100%;
 	width: 60%;
 	margin: 0 20%;
 	background-color: #EBE9CE;
