@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
+<link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="stylesheets/blog_wk2.css">
+</head>
+<body>
+	<header class="clearfix">
+		<h1>Technical Blog Post, Week 4</h1>
+	</header>		
+	<div id="content_area">
+		<nav class="clearfix">
+			<ul>
+				<li><a href="http://afogel.github.io/">Home</a></li>
+				<li><a href="http://afogel.github.io/unit1_projects/week2_cultural.html">Cultural Blogs</a></li>
+				<li><a href="http://afogel.github.io/unit1_projects/week3_technical_blog.html">Technical Blog 3</a></li>
+			</ul>
+		</nav>
+		<article>
+			<header>
+				<h1>Hashes vs. Arrays</h1>
+			</header>
+				<h1>Sunday, May 18 2014</h1>
+				<p>
+					Hello, dear reader! Welcome to another installment of "Ariel pretends to be a Ruby Expert!". Okay, so maybe this is the first installment, but roll with the punches, eh? Alright, so let's begin, shall we?
+				</p>
+				<h2>Arrays! What are they?</h2>
+				<p>
+					So, an array is this nifty little list, frequently one that you can order by descending/ascending numberical or alphabetical order. You can tell an object is an array if it lives between two square brackets. Each object (or as the savvy programmers call them, elements) lives between the two square brackets and is separated by a comma. Fun fact? You can nest, your arrays, meaning you can make lists of lists! Pretty insane, eh? Just to give you a sense of what it looks like, here is a sample array that we're storing in a variable `sampleArray' (I know, I'm feeling tired and not particularly creative with the variable names):
+					<br><br>sampleArray = ["hello","my","name","is","Ariel"]<br><br>
+					As we can see, each element of the array is a different word or String. If we were particularly partial to any element (or if we simply wanted to grab part of the list), we might consider using that element's <i>index number</i>. An index number is kind of what it sounds like: a number that references where each element can be found in the array.<br>
+					Because programmers are wacky birds, they start counting at 0, so if we wanted to only pull out the word "hello" from our sample array, we would write:
+					<br><br>sampleArray[0]<br><br>
+					This means that we're pulling out the first element (stuck at the "0th" position in our array).
+					Cool.
+				</p>
+				<p>
+					So, that's all well and good, but let's face it. Sometimes, you don't just need lists. You need smart lists. Like, where one pair is linked to another. That's when the structure called the Hash comes into the picture. A hash is kind of like an array, except that it is constructed entirely of pairs of elements. Each pair is made up of two parts (duh): a key and a value. Keys are meant to be unique, so don't repeat your keys. Hashes are much less fussy about what you put in the value slot. Basically, when you're creating a list where you care a lot less about the order of the list and a lot more about the fact that you can always pull up a corresponding value for your object. I'm losing steam and starting to stop making so much sense, so lets look at an example, shall we?
+				</p>
+				<p>
+					So here we go. Let's say that we want to link written out numbers with their integer form:
+					<br><br>numbers = {"one" => 1, "two" => 2, "three" => 3}<br><br>
+					Whoopie! A super exciting example, I know.
+					But here's the cool part. Let's say I try to spit out the integer value for "two", now I can!
+					All's I needs to do is simply write:
+					<br><br>numbers["two"]<br><br>
+					and ruby will spit out: 2! Pretty nifty.
+				</p>
+				<p>
+					So I'm hitting a wall here, so I'm going to just clear up some final distinctions. Basically, arrays are lists that are good for sorting. You put stuff into an array simply because you need a means of keeping track of a list and the items in the list don't have a relationship to each other. However, Hashes are good for tying items together. So if there are relationships between the items that are included in your lists and you want to pull out information from your lists based on that relationship, Hashes are the way to go.
+					I hope this was enlightening. Until next time...ZZZZZZZZZZZ
+				</p>
+		</article>
+		<footer>
+			<h4><a href="mailto:fogeltine@gmail.com">A Fogel</a> Production, 2014.</h4>
+		</footer>
+	</div>
+	</body>
+</html>
