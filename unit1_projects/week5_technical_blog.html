@@ -1,0 +1,77 @@
+Ruby Classes--Who, What, Why?
+
+So, let's chat quickly about classes. A good jumping off point might be that everything in ruby is an object. So, real quick, let's take a detour into talking about what objects are. I'm not a bit fan of quoting a lot, but I have to say...Steve Jobs did such an awesome job of explaining Object Oriented Design, I can't help but share what he had to say:
+
+Objects are like people. They’re living, breathing things that have knowledge inside them about how to do things and have memory inside them so they can remember things. And rather than interacting with them at a very low level, you interact with them at a very high level of abstraction, like we’re doing right here.
+Here’s an example: If I’m your laundry object, you can give me your dirty clothes and send me a message that says, “Can you get my clothes laundered, please.” I happen to know where the best laundry place in San Francisco is. And I speak English, and I have dollars in my pockets. So I go out and hail a taxicab and tell the driver to take me to this place in San Francisco. I go get your clothes laundered, I jump back in the cab, I get back here. I give you your clean clothes and say, “Here are your clean clothes.”
+You have no idea how I did that. You have no knowledge of the laundry place. Maybe you speak French, and you can’t even hail a taxi. You can’t pay for one, you don’t have dollars in your pocket. Yet I knew how to do all of that. And you didn’t have to know any of it. All that complexity was hidden inside of me, and we were able to interact at a very high level of abstraction. That’s what objects are. They encapsulate complexity, and the interfaces to that complexity are high level.
+
+<h6>Source: <a href="http://www.rollingstone.com/culture/news/steve-jobs-in-1994-the-rolling-stone-interview-20110117">1994 Rolling Stone Interview with Steve Jobs by Jeff Goodell</a></h6>
+
+WHOA. MIND = BLOWN, right? Seriously, I'm not convinced I could have explained it better...which is why I didn't. But what I think I <i>can</i> do is solidify the concepts and show what it means from the perspective of Ruby. So, back to our original point about classes--let's look at Steve's awesome example! 
+So, when Steve said "All that complexity was hidden inside of me", the "me" he's referring to is what, in Ruby, we would call a class! Basically, it's the vehicle that we use to create the framework for new types of objects we would like to create and the place where we define new methods that are specifically for the purposes of manipulating our objects. Let's see what Steve's example might look like in Ruby code, though!
+
+Let's just start with a basic example of a Clothes class that can create various clothes objects, each of which has certain types of attributes. As you'll see below, we use a special method called initialize to create new objects in our class.
+
+class Clothes
+	def initialize(article, color, cleanliness)
+		@article = article
+		@color = color
+		@cleanliness = cleanliness
+	end
+end
+
+
+So, in the above code, we declared a class called Clothes and said that when we create new Clothes objects, they should have an attribute describing the type of article of clothing that they are, their color, and their state of cleanliness. So now that we have that class defined, let's make some Clothes objects! To use the initialize method from above, we first call the class name (Clothes, in our example), followed by a ".new" and any attributes that are going to be assigned to the object
+
+	blue_shirt = Clothes.new("shirt","blue","clean")
+	red_pants = Clothes.new("pants","red","dirty")
+
+By running the code after declaring the our class, Clothes, we now have two Clothes objects! One, clearly, is a clean blue shirt and the other is a pair of dirty red pants. The attributes of the objects are stored in new objects called instance variables (denoted by the @ symbol in front of the name). 
+These instance variables are like other variables we can define, except their scope is confined entirely within the context of the class. 
+The real power of instance variables, though, is that you can use the same syntax to assign different values to each object's attributes. 
+Hmm, that maybe wasn't the most concise or digestible way of putting it. 
+Basically, the value contained in the @cleanliness attribute of the blue_shirt object is "clean" while the value of the @cleanliness attribute of red_pants object is "dirty"! Pretty neat that Ruby knows that the same attribute, called for different objects, contains different values, right? This gets really useful when we delve into what I think is the <i>really</i> cool bit that Steve was talking about:
+
+Suppose we wanted to figure out how our clothes get and dirty...how would we do that? It's not like Ruby comes with a Object#CleanDirtyPants method! 
+The answer is simple--we build those methods into the class!
+So let's recycle some of our code here and then stick a couple of instance methods, or methods that deals specifically with objects from the class, into it:
+
+class Clothes
+	def initialize(article, color, cleanliness)
+		@article = article
+		@color = color
+		@cleanliness = cleanliness
+	end
+
+	def wear
+		puts "Oh. So you're wearing that dirty #{@article} again?! Gross." if @cleanliness=="dirty"
+		@cleanliness = "dirty"
+	end
+
+	def launder
+		raise ArgumentError.new("Don't send clean clothes to the laundry! Talk about a waste of money!!") unless @cleanliness=="dirty"
+		@cleanliness = "clean"
+	end
+end
+
+As the code above shows, we added two simple methods to our class, Clothes, that can be called using the Object.Method notation. If you pay attention, the aforementioned "power" of instance variables is out in full force in these methods! We don't have to have a separate condition for how the method should deal with the red_pants versus the blue_shirt object...since they're both members of the same class, all we have to mention is the attribute in question (i.e. @cleanliness) and the methods will know what to do!
+Let's see these methods in action. The first method, wear, can be called on any of our Clothes objects, but you'll notice that we'll get judged by our snarky console if we wear something that's already dirty:
+
+	blue_shirt.wear 
+		# output: => "dirty"
+	red_pants.wear
+		# output: Oh. So you're wearing that dirty pants again?! Gross.
+		# output: => "dirty"
+
+WOWEE! Can you believe it?! How judgey am I? :P
+No but seriously, pretty neat. When we "wear" the blue_shirt, it's attribute @cleanliness gets reassigned from "clean" to "dirty". When we wear our much beloved but already soiled red pants, the wear method spits out a message and then reassigns the pants' @cleanliness instance variable from "dirty" to "dirty" (surprise, surprise). Let's see what happens we try to wash our still dirty, much beloved red_pants using the Clothes#launder method.
+
+	red_pants.launder
+		=> "clean"
+	red_pants.launder
+		ArgumentError: Don't send clean clothes to the laundry! Talk about a waste of money!!
+
+Neat! The first time we called the launder method on red_pants, red_pants's @cleanliness instance variable got reassigned to "clean". But when we called it a second time, it freaked out on us because they were already clean! Neat-o.
+
+Sadly, this blog post only skims the surface on the complexity that Steve was talking about it, but if I turned this into a book, you probably wouldn't come back and read my blog any more, so I promise a second installment in which I talk about the differences between private and public class methods and how we might see the "hidden" steps Steve talked about in order to launder the clothes in action. But that's for another day. Til then, signing off!
