@@ -15,14 +15,14 @@ body{
     -moz-transform: translateY(-30%);
     -ms-transform: translateY(-30%);
     transform: translateY(-30%);
-    background-repeat: url('images/3.png');
+    background: url('images/3.png');
 }
 
 nav img{
 	/*max-width: 20%;*/
 	/*max-height: 30%;*/
-	width: 10%;
-	height: 15%;
+	max-width: 35%;
+	max-height: 60%;
 	border-radius: 50%;
 	display: block;
 	position: relative;
@@ -34,10 +34,15 @@ nav a{
 	display: block;
     position: relative;
     height: 50px;
-    width: 10%;
+    width: 35%;
     text-decoration: none;
     font-weight: 900;
     color:#C1D0D9;
+    margin-right: 0%;
+    background: transparent;
+}
+nav a:active, a:hover{
+	color:#EDD9AB;
 }
 nav a:visited{
 	color:#C1D0D9;
@@ -75,12 +80,15 @@ section {
 }
 #blog_post{
 	display: block;
-	padding-left: 10%;
+	padding-left: 15%;
+}
+#blog_post>h1{
+	font-weight: bolder;
 }
 
 .references{
 	display: block;
-	padding-left: 10%;
+	padding-left: 15%;
 }
 #ref1{
 
