@@ -19,18 +19,22 @@ body{
 }
 
 nav img{
-	max-width: 60%;
-	max-height: 60%;
+	/*max-width: 20%;*/
+	/*max-height: 30%;*/
+	width: 10%;
+	height: 15%;
 	border-radius: 50%;
 	display: block;
 	position: relative;
 	margin-bottom: 5%;
+	margin-top:5%;
 }
 
 nav a{
 	display: block;
     position: relative;
     height: 50px;
+    width: 10%;
     text-decoration: none;
     font-weight: 900;
     color:#C1D0D9;
@@ -54,7 +58,7 @@ nav>a:before{
 }
 
 nav>a:hover:before, nav>a:active:before{
-	width: 30%;
+	width: 100%;
 	-webkit-transition: width 1s;
 	-moz-transition: width 1s;
 	-o-transition: width 1s;
