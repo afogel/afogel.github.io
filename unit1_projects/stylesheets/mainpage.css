@@ -96,14 +96,14 @@ nav>a:hover:before, nav>a:active:before{
     margin-left: 20%;
     margin-right: 5%;
     margin-top: 8%;
-    min-height: 70%;
-    min-width: 60%;
+    min-height: 25%;
+    min-width: 40%;
     position: fixed;
     /*z-index: 9999;*/
     /*background: #A44103;*/
     border: 5px solid #345738;
     opacity: .5;
-    border-radius: 5%;
+    /*border-radius: 5%;*/
     overflow: scroll;
 }
 
