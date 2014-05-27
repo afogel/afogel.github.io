@@ -62,7 +62,7 @@ nav a{
     margin-right: 0%;
     background: transparent;
 }
-nav a:active, a:hover{
+nav a:active, a:hover, a:visited:hover{
     color:#EDD9AB;
 }
 nav a:visited{
