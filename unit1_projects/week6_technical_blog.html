@@ -32,7 +32,7 @@
 		<p>
 			As the picture above shows, in cell B4, Excel is taking input from cells B2 and B3, evaluating each, and then summing them together. After we submit the function to Excel (click enter), Excel will display a new FixNum data type (the Integer, 3) in cell B4. It's as simple as that!
 			<br>
-			A frequent hallmark of functional programming is how functions are nested within each other. This can be seen and exploited in the Excel software package <i>ad infinitum</i>, but let's look at a simple basic example of what it might look like in Excel.
+			A frequent hallmark of functional programming is how functions are nested within each other. This can be seen and exploited in the Excel software package <i>ad infinitum</i>, but let's look at a simple basic example of what it might look like.
 		</p>
 		<img src="images/blog_images/techblog6_img2.png"/>
 		<p>
@@ -44,7 +44,7 @@
 			</ol>
 		</p>
 		<p>
-			So, that's all well and good. What's the story with Object Oriented Design? How is it different? This conversation really piggy-backs off of ideas discussed in <a href="http://afogel.github.io/unit1_projects/week5_technical_blog.html">last week's blog post</a>. 
+			So, that's all well and good. What's the story with Object Oriented Design? How is it different? This conversation really piggy-backs off of ideas regarding classes and objects discussed in <a href="http://afogel.github.io/unit1_projects/week5_technical_blog.html">last week's blog post</a>. 
 		</p>
 		<p>
 			In Object Oriented programming languages, everything is an object which are built using classes. If we think about the similar examples those we just discussed using Excel, we can also write a program (or simply display to the console) the result of 1 + 2. Using Ruby, let's store each Integer in a variable and then run the operation:
@@ -57,11 +57,17 @@
 		<p>
 			What's interesting about this little bit of code (and here's where the big difference between the two programming paradigms comes into effect) is that while the variables containing the values <span class="primitive">1</span> and <span class="primitive">2</span> represent a primitive data type, they're actually objects that are members of the Integer Ruby class. This means that, as members of that class, they know additional information about the information they contain and also have built in methods that can be called to manipulate their content. This could, for example, be the number of character spaces that the primitive data they hold takes up or whether the Integer that they are holding is an even or odd Integer.
 		</p>
+		<div class="code_example">
+			var_one.even?<br>
+				&nbsp&nbsp<span class="comment"># output: => "false"</span><br>
+			var_two.even?<br>
+				&nbsp&nbsp<span class="comment"># output: => "true"</span>
+		</div>
 		<p>
-			And <i>this</i>, dear friends, is where we draw the ultimate distinction between the languages: while functional programming can also tell you whether an Integer is even or odd, that information would not be stored anywhere. If you wanted to find out whether an Integer is even or odd when programming in a functional language, you would have to provide a certain function with an Integer input, it would evaluate the input, and then it would return a <span class="primitive">true</span> or <span class="primitive">false</span> statement based on the output. There is no way that the information automatically stored in the primitive data. In contrast, Ruby objects (as well as objects in other languages) store, or at the very least are capable of storing using a method like #instance_variable_set, those attributes within themselves. 
+			And <i>this</i>, dear friends, is where we draw the ultimate distinction between the paradigms: while functional programming can also tell you whether an Integer is even or odd, that information would not be stored anywhere. If you wanted to find out whether an Integer is even or odd when programming in a functional language, you would have to provide a certain function with an Integer input, it would evaluate the input, and then it would return a <span class="primitive">true</span> or <span class="primitive">false</span> statement based on the output. There is no way that the information automatically stored in the primitive data. In contrast, Ruby objects (as well as objects in other languages) store, or at the very least are capable of storing using a method like #instance_variable_set, those attributes within themselves. 
 		</p>
 		<span class="blockquote"><p>
-			As Steve Jobs said, "[Objects]...have knowledge inside them about how to do things and have memory inside them so they can remember things. And rather than interacting with them at a very low level, you interact with them at a very high level of abstraction...They encapsulate complexity, and the interfaces to that complexity are high level."
+			As Steve Jobs said, "[Objects] have knowledge inside them about how to do things and have memory inside them so they can remember things. And rather than interacting with them at a very low level, you interact with them at a very high level of abstraction...They encapsulate complexity, and the interfaces to that complexity are high level."
 			<h6>Source: <a href="http://www.rollingstone.com/culture/news/steve-jobs-in-1994-the-rolling-stone-interview-20110117">1994 Rolling Stone Interview with Steve Jobs by Jeff Goodell</a></h6>
 		</p></span>
 	</section>
@@ -74,3 +80,8 @@
 	</section>
 	</body>
 </html>
+
+
+
+<!-- what doesn't make sense?
+ -->
