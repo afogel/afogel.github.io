@@ -10,18 +10,54 @@
 		<nav>
 			<img src="images/navfoto_thumb.jpg">
 			<a href="http://afogel.github.io">Home</a>
-	        <a href="http://afogel.github.io/unit1_projects/about.html">About</a>
-	        <a href="http://afogel.github.io/unit1_projects/portfolio.html">Portfolio</a>
+	        <a href="http://afogel.github.io/#">About</a>
+	        <a href="http://afogel.github.io/#">Portfolio</a>
 	        <a href="http://afogel.github.io/unit1_projects/blog_posts.html">Blog Posts</a>
-	        <a href="http://afogel.github.io/contact.html">Contact Me</a>
+	        <a href="http://afogel.github.io/#">Contact Me</a>
 		</nav>
 	</div>
 	<section id="blog_post">
-		<h1>Ruby Classes--Who, What, Why?</h1>
-		<h3>May 25, 2014</h3>
+		<h1>Object Oriented and Functional Languages: What are they and how are they different?</h1>
+		<h3>June 4, 2014</h3>
 		<p>
-			So, let's chat quickly about classes. A good jumping off point might be that everything in ruby is an object. So, real quick, let's take a detour into talking about what objects are. I'm not a bit fan of quoting a lot, but I have to say...Steve Jobs did such an awesome job of explaining Object Oriented Design, I can't help but share what he had to say:
+			Welcome to our latest installment of technical blog posts! So the question was posed to me: what is the difference between a functional programming and a object oriented programming language? This one was a bit of a toughie for me, so I did some research (thanks Wikipedia!) and talked to some people (Thanks Matt!) and this is what I've come up with. Let's first look at Functional Programming.
 		</p>
+		<p>
+			If I were to think of the most basic description of functional paradigm, it would be a programming language that takes a basic, primitive data (such as String or Integer data), performs a function on that primitive data, and returns modified data. These languages rely on evaluating some fixed input and then providing an output. One of the most accessible examples that I can think of is a spreadsheet software package, like Microsoft Excel.
+		</p>
+		<p>
+			In Excel, we can have a number of cells that contain different types of primitive data. In order to manipulate those data in an abstract format, we can use a form of functional programming to perform "in-cell operations/functions", which basically let us reference the contents of any given cell/cells, write a function that performs any number of operations, and then display the output of that operation in the new cell. If you are having difficulty imagining what this means, look at the image below:
+		</p>
+		<img src="images/blog_images/techblog6_img1.png"/>
+		<p>
+			As the picture above shows, in cell B4, Excel is taking input from cells B2 and B3, evaluating each, and then summing them together. After we submit the function to Excel (click enter), Excel will display a new FixNum data type (the Integer, 3) in cell B4. It's as simple as that!
+			<br>
+			A frequent hallmark of functional programming is how functions are nested within each other. This can be seen and exploited in the Excel software package <i>ad infinitum</i>, but let's look at a simple basic example of what it might look like in Excel.
+		</p>
+		<img src="images/blog_images/techblog6_img2.png"/>
+		<p>
+			As we see in this example, Excel evaluates each nested function and then uses the functions' outputs to evaluate the next function, finally returning a primitive data output to cell B4. If we want to pick this apart with a play by play, we could describe the process as Excel:
+			<ol>
+				<li>Evaluating the summation function (i.e. B2+B3)</li>
+				<li>Substituting the sum of that most recent function into the logical test (i.e. 3>5)</li>
+				<li>and finally, Evaluating a conditional statement based on the outcome of the logical statement (i.e. IF 3>5 is TRUE, let the contents of cell B4 be equal to the contents of cell C2; otherwise, let the contents of cell B4 be equal to the contents of cell C3).</li>
+			</ol>
+		</p>
+		<p>
+			So, that's all well and good. What's the story with Object Oriented Design? How is it different? This conversation really piggy-backs off of ideas discussed in <a href="http://afogel.github.io/unit1_projects/week5_technical_blog.html">last week's blog post</a>. 
+		</p>
+		<p>
+			In Object Oriented programming languages, everything is an object which are built using classes. If we think about the similar examples those we just discussed using Excel, we can also write a program (or simply display to the console) the result of 1 + 2. Perhaps we'll store each Integer in a variable and then run the operation:
+		</p>
+		<div class="code_example">
+			<span class="function">class</span> Clothes<br>
+				&nbsp&nbsp<span class="function">def</span> <span class="init">initialize</span>(<span class="parameters">article, color, cleanliness</span>)<br>
+					&nbsp&nbsp&nbsp&nbsp@article <span class="function">=</span> article<br>
+					&nbsp&nbsp&nbsp&nbsp@color <span class="function">=</span> color<br>
+					&nbsp&nbsp&nbsp&nbsp@cleanliness <span class="function">=</span> cleanliness<br>
+				&nbsp&nbsp<span class="function">end</span><br>
+			<span class="function">end</span>
+		</div>
 		<span class="blockquote"><p>
 			Objects are like people. They're living, breathing things that have knowledge inside them about how to do things and have memory inside them so they can remember things. And rather than interacting with them at a very low level, you interact with them at a very high level of abstraction, like we're doing right here.<br>
 			Here's an example: If I'm your laundry object, you can give me your dirty clothes and send me a message that says, "Can you get my clothes laundered, please."" I happen to know where the best laundry place in San Francisco is. And I speak English, and I have dollars in my pockets. So I go out and hail a taxicab and tell the driver to take me to this place in San Francisco. I go get your clothes laundered, I jump back in the cab, I get back here. I give you your clean clothes and say, "Here are your clean clothes."<br>
@@ -37,20 +73,12 @@
 		<p>
 			Let's just start with a basic example of a Clothes class that can create various clothes objects, each of which has certain types of attributes. As you'll see below, we use a special method called initialize to create new objects in our class.
 		</p>
-		<div class="code_example">
-			<span class="function">class</span> Clothes<br>
-				&nbsp&nbsp<span class="function">def</span> <span class="init">initialize</span>(<span class="parameters">article, color, cleanliness</span>)<br>
-					&nbsp&nbsp&nbsp&nbsp@article <span class="function">=</span> article<br>
-					&nbsp&nbsp&nbsp&nbsp@color <span class="function">=</span> color<br>
-					&nbsp&nbsp&nbsp&nbsp@cleanliness <span class="function">=</span> cleanliness<br>
-				&nbsp&nbsp<span class="function">end</span><br>
-			<span class="function">end</span>
-		</div>
+		
 		<p>
 			So, in the above code, we declared a class called Clothes and said that when we create new Clothes objects, they should have an attribute describing the type of article of clothing that they are, their color, and their state of cleanliness. So now that we have that class defined, let's make some Clothes objects! To use the initialize method from above, we first call the class name (Clothes, in our example), followed by a ".new" and any attributes that are going to be assigned to the object:
 		</p>
 		<div class="code_example">
-			blue_shirt <span class="function">=</span> <span class="class">Clothes</span>.<span class="function">new</span>(<span class="string">"shirt","blue","clean"</span>)<br>
+			blue_shirt <span class="function">=</span> <span class="class">Clothes</span>.<span class="function">new</span>(<span class="string">shirt","blue","clean"</span>)<br>
 			red_pants <span class="function">=</span> <span class="class">Clothes</span>.<span class="function">new</span>(<span class="string">"pants","red","dirty"</span>)
 		</div>
 		<p>
