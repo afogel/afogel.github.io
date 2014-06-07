@@ -23,20 +23,20 @@
 			Welcome to our latest installment of technical blog posts! So the question was posed to me: what is the difference between a functional programming and a object oriented programming language? This one was a bit of a toughie for me, so I did some research (thanks Wikipedia!) and talked to some people (Thanks Matt!) and this is what I've come up with. Let's first look at Functional Programming.
 		</p>
 		<p>
-			If I were to think of the most basic description of functional paradigm, it would be a programming language that takes a basic, primitive data (such as String or Integer data), performs a function on that primitive data, and returns modified data. These languages rely on evaluating some fixed input and then providing an output. One of the most accessible examples that I can think of is a spreadsheet software package, like Microsoft Excel.
+			If I were to think of the most basic description of functional paradigm, it would be a programming language that takes basic, primitive data (such as String or Integer data), performs a function on those data, and returns modified primitive data. These languages rely on evaluating some fixed input and then providing an output. One of the most accessible examples that I can think of is a spreadsheet software package, like Microsoft Excel.
 		</p>
 		<p>
 			In Excel, we can have a number of cells that contain different types of primitive data. In order to manipulate those data in an abstract format, we can use a form of functional programming to perform "in-cell operations/functions", which basically let us reference the contents of any given cell/cells, write a function that performs any number of operations, and then display the output of that operation in the new cell. If you are having difficulty imagining what this means, look at the image below:
 		</p>
 		<img src="images/blog_images/techblog6_img1.png"/>
 		<p>
-			As the picture above shows, in cell B4, Excel is taking input from cells B2 and B3, evaluating each, and then summing them together. After we submit the function to Excel (click enter), Excel will display a new FixNum data type (the Integer, 3) in cell B4. It's as simple as that!
+			As the picture above shows, in cell B4, Excel is taking input from cells B2 and B3, evaluating each, and then summing them together. After we submit the function to Excel (click enter), Excel will display a new Integer data type (the Integer, 3) in cell B4. It's as simple as that!
 			<br>
 			A frequent hallmark of functional programming is how functions are nested within each other. This can be seen and exploited in the Excel software package <i>ad infinitum</i>, but let's look at a simple basic example of what it might look like.
 		</p>
 		<img src="images/blog_images/techblog6_img2.png"/>
 		<p>
-			As we see in this example, Excel evaluates each nested function and then uses the functions' outputs to evaluate the next function, finally returning a primitive data output to cell B4. If we want to pick this apart with a play by play, we could describe the process as Excel:
+			As we see in this example, Excel evaluates each nested function and then uses the functions' outputs to evaluate the next function, finally returning some primitive data output to cell B4. If we want to pick this apart with a play by play, we could describe the process as Excel:
 			<ol>
 				<li>Evaluating the summation function (i.e. B2+B3)</li>
 				<li>Substituting the sum of that most recent function into the logical test (i.e. 3>5)</li>
